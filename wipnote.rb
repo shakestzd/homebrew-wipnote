@@ -5,13 +5,13 @@
 class Wipnote < Formula
   desc "Local-first observability and coordination platform for AI-assisted development"
   homepage "https://github.com/shakestzd/wipnote"
-  version "0.62.0"
+  version "0.62.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/shakestzd/wipnote/releases/download/v0.62.0/wipnote_0.62.0_darwin_amd64.tar.gz"
-      sha256 "9287146aab80fc1f6bedf33d93ad5a53159f1f7daf90776a79213d299013d6d0"
+      url "https://github.com/shakestzd/wipnote/releases/download/v0.62.1/wipnote_0.62.1_darwin_amd64.tar.gz"
+      sha256 "d4137b068c78a2979b8d40b08a0ee56d46423383842c18ff1a29510f788a33e7"
 
       define_method(:install) do
         bin.install "wipnote"
@@ -19,11 +19,12 @@ class Wipnote < Formula
         (share/"wipnote").install "plugin"
         (share/"wipnote").install "codex-marketplace"
         (share/"wipnote").install "gemini-extension"
+        (share/"wipnote").install "antigravity-extension"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/shakestzd/wipnote/releases/download/v0.62.0/wipnote_0.62.0_darwin_arm64.tar.gz"
-      sha256 "d5687f95a0950cae67e7e73700dcff034d3d378723e33365a84a2bb7ea721d5e"
+      url "https://github.com/shakestzd/wipnote/releases/download/v0.62.1/wipnote_0.62.1_darwin_arm64.tar.gz"
+      sha256 "296d5e680e89991516215f5b7eda81d9185e219b925036a33457026d1c4ecb44"
 
       define_method(:install) do
         bin.install "wipnote"
@@ -31,31 +32,34 @@ class Wipnote < Formula
         (share/"wipnote").install "plugin"
         (share/"wipnote").install "codex-marketplace"
         (share/"wipnote").install "gemini-extension"
+        (share/"wipnote").install "antigravity-extension"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/shakestzd/wipnote/releases/download/v0.62.0/wipnote_0.62.0_linux_amd64.tar.gz"
-      sha256 "c136b4450d774d52b6d74623960981090e8ec22972166ba5807d1123dad6f240"
+      url "https://github.com/shakestzd/wipnote/releases/download/v0.62.1/wipnote_0.62.1_linux_amd64.tar.gz"
+      sha256 "f9edbbf11e7f29d700cc522bd415fed32f92a37a5d53e8b9c4010d807717149d"
       define_method(:install) do
         bin.install "wipnote"
         bin.install_symlink "wipnote" => "wn"
         (share/"wipnote").install "plugin"
         (share/"wipnote").install "codex-marketplace"
         (share/"wipnote").install "gemini-extension"
+        (share/"wipnote").install "antigravity-extension"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/shakestzd/wipnote/releases/download/v0.62.0/wipnote_0.62.0_linux_arm64.tar.gz"
-      sha256 "9e79dbf4b8e0f97f0ff28be37aebda300fb604e47d32c3bd6453c7b28890028b"
+      url "https://github.com/shakestzd/wipnote/releases/download/v0.62.1/wipnote_0.62.1_linux_arm64.tar.gz"
+      sha256 "116f6ba4875d3c7640534e04f3fe27711929794fb87d65dbc8144546788b3073"
       define_method(:install) do
         bin.install "wipnote"
         bin.install_symlink "wipnote" => "wn"
         (share/"wipnote").install "plugin"
         (share/"wipnote").install "codex-marketplace"
         (share/"wipnote").install "gemini-extension"
+        (share/"wipnote").install "antigravity-extension"
       end
     end
   end
