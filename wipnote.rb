@@ -11,7 +11,7 @@ class Wipnote < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/shakestzd/wipnote/releases/download/v0.64.2/wipnote_0.64.2_darwin_amd64.tar.gz"
-      sha256 "abf181bfe1db579decbda4855db14da75533e313dcb10779ca35dc42ed1de7a8"
+      sha256 "3ceac7fc90d04166edcd1e30d221b22e5e5a1170db43c66cb190f91c850931c9"
 
       define_method(:install) do
         bin.install "wipnote"
@@ -24,7 +24,7 @@ class Wipnote < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/shakestzd/wipnote/releases/download/v0.64.2/wipnote_0.64.2_darwin_arm64.tar.gz"
-      sha256 "0b94ee176be7c8e473acb63a70ccf354d6971bb3ff34e9093a01e0beea1f62de"
+      sha256 "a68662153b0b80625bab082cf86d43be2443b44b0ae7afbfc4a01558aa088aa8"
 
       define_method(:install) do
         bin.install "wipnote"
@@ -40,7 +40,7 @@ class Wipnote < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/shakestzd/wipnote/releases/download/v0.64.2/wipnote_0.64.2_linux_amd64.tar.gz"
-      sha256 "d549df9c51162f3535241a9b790666fd7a7ed3983eb8e563c203e2c786b0e903"
+      sha256 "76ddc1f9103861c50a662177a52216a280c8706f9ce9be1f8dc89f029c2ee5c0"
       define_method(:install) do
         bin.install "wipnote"
         bin.install_symlink "wipnote" => "wn"
@@ -52,7 +52,7 @@ class Wipnote < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/shakestzd/wipnote/releases/download/v0.64.2/wipnote_0.64.2_linux_arm64.tar.gz"
-      sha256 "802d421f39baa1050582677a3ad699ce5fd2357580d7e3d9cc9336298fff526c"
+      sha256 "ebf11615b92ff2ca760fe1d0a3eb26cde69b3b88940b464103c9067f1355531d"
       define_method(:install) do
         bin.install "wipnote"
         bin.install_symlink "wipnote" => "wn"
