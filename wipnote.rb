@@ -5,13 +5,13 @@
 class Wipnote < Formula
   desc "Local-first observability and coordination platform for AI-assisted development"
   homepage "https://github.com/shakestzd/wipnote"
-  version "0.81.0"
+  version "0.82.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/shakestzd/wipnote/releases/download/v0.81.0/wipnote_0.81.0_darwin_amd64.tar.gz"
-      sha256 "40e92cdf428c9fa3c943b7bcab19c74ffb19c7d09124a1e164a5f1be81740849"
+      url "https://github.com/shakestzd/wipnote/releases/download/v0.82.0/wipnote_0.82.0_darwin_amd64.tar.gz"
+      sha256 "62c9119adbaf90e75b63cc8a5dca8d492bc686ebdde66f6a026053be6a23bf7c"
 
       define_method(:install) do
         bin.install "wipnote"
@@ -23,8 +23,8 @@ class Wipnote < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/shakestzd/wipnote/releases/download/v0.81.0/wipnote_0.81.0_darwin_arm64.tar.gz"
-      sha256 "233a034f85a7fd011a8de6067c74ceabb10720f29edd4adc6a12c907a32008fa"
+      url "https://github.com/shakestzd/wipnote/releases/download/v0.82.0/wipnote_0.82.0_darwin_arm64.tar.gz"
+      sha256 "2fc5ac8c6eb501de679f955bf5693e9f58f00940d17a029578e759305b1b0f95"
 
       define_method(:install) do
         bin.install "wipnote"
@@ -39,8 +39,8 @@ class Wipnote < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/shakestzd/wipnote/releases/download/v0.81.0/wipnote_0.81.0_linux_amd64.tar.gz"
-      sha256 "c4de08f9967031736ba6d8fb9894b6228a9ab5ef389b6d5400dc04674fff0347"
+      url "https://github.com/shakestzd/wipnote/releases/download/v0.82.0/wipnote_0.82.0_linux_amd64.tar.gz"
+      sha256 "bca94ec0c5c9ac5e92924b1ec04d7997354f126600ccef64f314b090e0c13441"
       define_method(:install) do
         bin.install "wipnote"
         bin.install_symlink "wipnote" => "wn"
@@ -51,8 +51,8 @@ class Wipnote < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/shakestzd/wipnote/releases/download/v0.81.0/wipnote_0.81.0_linux_arm64.tar.gz"
-      sha256 "4d12ced0e1a6c48b86e99963cbb50fd0f5dbaed65f4d85af09525310243ff937"
+      url "https://github.com/shakestzd/wipnote/releases/download/v0.82.0/wipnote_0.82.0_linux_arm64.tar.gz"
+      sha256 "e7fcc095d3a7e22061e6cbfc18548cbee7c64adf616694148d4056d284960ff6"
       define_method(:install) do
         bin.install "wipnote"
         bin.install_symlink "wipnote" => "wn"
